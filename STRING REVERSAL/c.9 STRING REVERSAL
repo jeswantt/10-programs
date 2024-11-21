@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <string.h>
+
+void reverse_string(char *str) {
+    int start = 0;
+    int end = strlen(str) - 1;
+    char temp;
+
+    // Swap characters from start and end until they meet in the middle
+    while (start < end) {
+        // Swap characters at start and end
+        temp = str[start];
+        str[start] = str[end];
+        str[end] = temp;
+
+        // Move the start index forward and the end index backward
+        start++;
+        end--;
+    }
+}
+
+int main() {
+    char str[100];
+
+    // Input the string
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);  // Using fgets to handle spaces
+    str[strcspn(str, "\n")] = 0;  // Remove the newline character if fgets adds it
+
+    // Reverse the string
+    reverse_string(str);
+
+    // Output the reversed string
+    printf("Reversed string: %s\n", str);
+
+    return 0;
+}#include <stdio.h>
+#include <string.h>
+
+void reverse_string(char *str) {
+    int start = 0;
+    int end = strlen(str) - 1;
+    char temp;
+
+    // Swap characters from start and end until they meet in the middle
+    while (start < end) {
+        // Swap characters at start and end
+        temp = str[start];
+        str[start] = str[end];
+        str[end] = temp;
+
+        // Move the start index forward and the end index backward
+        start++;
+        end--;
+    }
+}
+
+int main() {
+    char str[100];
+
+    // Input the string
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);  // Using fgets to handle spaces
+    str[strcspn(str, "\n")] = 0;  // Remove the newline character if fgets adds it
+
+    // Reverse the string
+    reverse_string(str);
+
+    // Output the reversed string
+    printf("Reversed string: %s\n", str);
+
+    return 0;
+}
